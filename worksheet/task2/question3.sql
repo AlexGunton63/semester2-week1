@@ -4,4 +4,4 @@
 
 --SELECT DepartmentName, Count(*) AS TotalEnrolments FROM Department GROUP BY DepartmentName 
 
-SELECT Department.DepartmentName, COUNT(Enrollment.EnrollmentId) AS TotalEnrolments FROM Department LEFT JOIN Course ON Department.DepartmentId = Course.DepartmentId LEFT JOIN Enrollment ON Course.CourseId = Enrollment.CourseId 
+SELECT Department.DepartmentName, COUNT(Enrolment.EnrolmentId) AS TotalEnrolments FROM Department JOIN Course ON Department.DepartmentId = Course.DepartmentId JOIN Enrolment ON Course.CourseId = Enrolment.CourseId 
